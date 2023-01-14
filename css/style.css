@@ -1,0 +1,581 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================================NAVBAR====================================== */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    position: sticky;
+    top: 0;
+    height: 10vh;
+    background-color: #e6cda5;
+    z-index: 11;
+}
+
+.logo img {
+    cursor: pointer;
+    min-height: 10vh;
+    max-height: 10vh;
+    padding-top: 20%;
+}
+
+.menu {
+    width: 40vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu li {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    list-style: none;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #653239;
+    transition: .5s;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.menu li a.active,
+.menu li a:hover {
+    background:#fff;
+    color: #653239;
+}
+
+nav .icon {
+    display: none;
+}
+
+/* ================================ KRAJ NAVBAR ====================================== */
+
+/* ================================ INDEX.HTML ====================================== */
+
+/* ---------- First section ---------- */
+
+.section1 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background: url('../img/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: auto;
+}
+
+.left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 10%;
+}
+
+.text {
+    font-family: 'Montserrat', sans-serif;
+    background: #e6cda5; opacity:0.8;
+    color: rgb(9, 9, 9);
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px rgba(255, 255, 255, 0.2);
+}
+
+.btnFirstSection {
+    width: 20%;
+    margin-top: 4%;
+    font-size: 1.9rem;
+    padding: 0.5rem 2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    border-radius: 10px;
+    border: none;
+    background-color: #e6cda5;
+}
+
+.btnFirstSection:hover {
+    border: 1px solid rgb(90, 90, 90);
+    background-color: #fff;
+    box-shadow: 0px 1px 1px 1px rgb(151, 150, 150);
+    cursor: pointer;
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+}
+
+button a {
+    text-decoration: none;
+    color: #653239;
+}
+
+/* ---------- End of first section ---------- */
+
+/* ---------- Second section ---------- */
+
+.section2 h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.3rem;
+}
+
+.container2 {
+    max-width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-bottom: 5%;
+    flex-wrap: wrap;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    background-color: #e6cda5;
+}
+
+.card img {
+    padding: 5%;
+    border-radius: 2rem;
+}
+
+.card h2 {
+    padding: 10% 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.7rem;
+}
+
+/* ---------- End of second section ---------- */
+
+/* ---------- Third section ---------- */
+
+.section3 {
+    height: max-content;
+    background-color:#e6cda5;
+}
+
+.container3 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    padding-left: 10%;
+    padding-bottom: 5%;
+    flex-wrap: wrap;
+}
+
+.section3 h1 {
+    font-size: 3rem;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 0.3rem;
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+
+.contact {
+    width: 25%;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.input , #contact-name{
+    border: none;
+    border-bottom: 1px solid #000;
+    width: 100%;
+    line-height: 1.7rem;
+    font-size: 1.3rem;
+    background-color: transparent;
+}
+
+.input:focus {
+    outline: none;
+    background: linear-gradient(0deg, rgba(177, 113, 219, .35) 2%, rgba(177, 113, 219, .30) 48%, rgba(177, 113, 219, .25) 100%);
+    border-radius: 5px;
+}
+
+.contact form label {
+    font-size: 1.3rem;
+    margin-top: 5%;
+    margin-bottom: 2%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.contact form textarea {
+    resize: none;
+    background-color: #cacaca;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    font-size: 1.5rem;
+    padding: 5%;
+}
+
+.btnContact {
+    margin: auto;
+    margin-top: 5%;
+    padding: 3% 20%;
+    border-radius: 10px;
+    border: 1px solid #000;
+    text-transform: uppercase;
+    transition: color 0.3s, background-color 0.3s;
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+    cursor: pointer;
+}
+
+.btnContact:hover {
+    background-color: rgb(1, 182, 16);
+    color: #000;
+}
+
+.map {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    align-items: center;
+}
+
+.map h2 {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 5%;
+    padding-top: 0;
+    font-size: 1.7rem;
+}
+
+/* ---------- End of third section ---------- */
+
+/* ============================ KRAJ ZA INDEX.HTML======================== */
+
+/* ========================== FOOTER ==================================*/
+
+footer {
+    height: max-content;
+}
+
+.footer-container {
+    height: 100%;
+    background-color: #2b2b28;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3% 15%;
+    color: #fff;
+}
+
+.col {
+    width: 25%;
+    height: 50%;
+}
+
+.col-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.img-footer {
+    width: 70%;
+    height: 100%;
+}
+
+.list-footer {
+    width: 67%;
+}
+
+.list-footer li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.list-footer li span {
+    padding-left: 2%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+}
+
+.list-footer li span a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.icon {
+    width: 100%;
+    color: #fff;
+    flex-basis: auto;
+}
+
+.full {
+    padding-top: 5%;
+    width: 80%;
+}
+
+.col-contact {
+    flex-grow: 1.5;
+}
+
+.col-flex1 {
+    display: flex;
+    justify-content: center top;
+    flex-direction: column;
+    align-items: center;
+}
+
+.col h2 {
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* ========================== KRAJ FOOTER ==================================*/
+
+/* ========================= O-NAMA.HTML ============================ */
+
+.div1onama{
+    margin-top: 0;
+    margin-bottom: 0;
+    background-image: linear-gradient(90deg, #653239 0%, #e6cda5 100%);
+    height: auto;
+}
+.div1onama h1{
+    margin: 0;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 0.3rem;
+    font-size: 3.5rem;
+    color: #e6cda5;
+    margin-bottom: 0;
+    padding: 3% 0%;
+}
+.container1onama{
+    display: flex;
+    justify-content:space-around ;
+    align-items: center;
+    margin-top: 0;
+    margin-left: 0;
+    flex-wrap: wrap;
+    margin-top: 0;
+    max-height: 100%;
+    min-width: 100%;
+    max-width: 100%;
+}
+.container11onama{
+    width:40%;
+    height: 100%;
+}
+.container12onama img{
+  width: 15rem;
+  height: 15rem;
+  padding-bottom: 8%;
+}
+#h21Div1onama{
+    font-family: "Montserrat",sans-serif;
+    padding-top:4% ;
+    font-size: 32px;
+    color: #e6cda5;
+    margin-bottom: 0%;
+}
+#p1Div1onama{
+    font-family: "Montserrat",sans-serif;
+    font-size: 21px;
+    color: #e6cda5;
+    width: 45vw;
+    margin-top:0px;
+    padding-bottom: 8%;
+}
+.div2onama{
+    background-image: linear-gradient(270deg, #653239 0%, #e6cda5 100%);
+    margin: 0;
+    margin-top: 0;
+    height: auto;
+}
+.container2onama{
+    display: flex;
+    justify-content:space-evenly ;
+    align-items: center;
+    margin-top: 0;
+    flex-wrap: wrap-reverse;
+
+}
+#h21Div2onama{
+    font-family: "Montserrat",sans-serif;
+    margin-top:0 ;
+    margin-bottom: 4%;
+    margin-left: 20%;
+    font-size: 32px;
+    color: #e6cda5;
+    padding-top: 15%;
+}  
+.container2onama img{
+    position: static;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 20px;   
+}
+#p1Div2onama{
+    font-family: "Montserrat",sans-serif;
+    margin-top:0 ;
+    margin-left: 20%;
+    font-size: 21px;
+    width: 45vw;
+    color: #e6cda5;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+}
+.div3onama{
+    margin-top: 0;
+    margin-bottom: 0;
+    background-image: linear-gradient(90deg, #653239 0%, #e6cda5 100%);
+    height: auto;
+}
+.container3onama {
+    display: flex;
+    justify-content:space-evenly ;
+    align-items: center;
+    margin-top: 0;
+    flex-wrap: wrap;
+}
+.container3onama img{
+    width: 15rem;
+    height: 15rem;
+}
+#h21Div3onama{
+    font-family: "Montserrat",sans-serif;
+    margin-top: 0; 
+    font-size: 32px;
+    color: #e6cda5;
+    padding-top: 7%;   
+}
+#p1Div3onama{
+    font-family: "Montserrat",sans-serif;
+    font-size: 21px;
+    color: #e6cda5;
+    width: 45vw;
+    margin-bottom: 0;
+    padding-bottom: 10%;
+}
+.div4onama{
+    margin-top: 0;
+    height: auto;
+    background-image:linear-gradient(to top, #653239 0%, #e6cda5 100%);
+}
+#h21Div4onama{
+    font-family: "Montserrat",sans-serif;
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 0;
+    color: #e6cda5;
+    padding: 3% 0;
+}
+
+/* ==================================== KRAJ ZA O-NAMA.HTML ======================================= */
+
+/* ==================================== POCETAK PAKETI.HTML ======================================= */
+
+.paketi-body {
+    background-image: url("../img/soft-vintage-gradient-blur-background-with-pastel-colored-well-use-as-studio-room-product-presentation-banner.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.paketi {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.3rem;
+    font-size: 3rem;
+    padding-top: 5vh;
+}
+.container-paketi {
+    background: #e6cda5;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    margin: 5% 15%;
+    border-radius: 10px;
+    height: 450px;
+}
+
+.container-paketi img {
+    width: 30%;
+    margin: 30% 0;
+}
+
+.desc {
+    display: flex;
+    justify-content: right;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 60%;
+}
+
+.desc h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem;
+    color: #653239;
+    letter-spacing: 0.3rem  ;
+}
+
+.desc p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.4rem;
+    padding: 4% 0;
+    color: #653239;
+}
+
+.desc button {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 1.5% 4%;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #653239;
+}
+
+.desc button:hover {
+    background: #000;
+    border: 1px solid #000;
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+}
+
+.desc button a {
+    text-decoration: none;
+    color: #e6cda5;
+}
+
+/* ==================================== KRAJ PAKETI.HTML ======================================= */
