@@ -5,15 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>O nama | Angry Wedding </title>
-    <link rel="shortcut icon" type="image/jpg" href="img/logo.png" />
+    <link rel="shortcut icon" type="image/jpg" href="../img/logoAW.png" />
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 
-     <!-- SlidesJS Required (if responsive): Sets the page width to the device width. -->
-     <meta name="viewport" content="width=device-width">
-     <!-- End SlidesJS Required -->
-    <!-- Sta je ovo i ovo ispod? -->
+    <!-- SlidesJS Required (if responsive): Sets the page width to the device width. -->
+    <meta name="viewport" content="width=device-width">
+    <!-- End SlidesJS Required -->
 
-    <script src="./js/jquery-3.5.1.min.js"></script>
+    <script src="../js/jquery-3.6.3.min.js"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
     <!-- SlidesJS Optional: If you'd like to use this design -->
@@ -142,29 +143,31 @@
 
 </head>
 <body>
-    <!----------------- Navbar ----------------->
+    <!-- ------ --> 
     <nav>
         <div class="logo">
-            <a href="./index.html"><img src="/img/logoAW.png" alt="wedding-logo" /></a>
+            <a href="./index.html"><img class="nav-logo" src="/img/logoAW.png" alt="wedding-logo" /></a>
         </div>
         <ul class="menu">
-            <li><a href="../index.html">Početna</a></li>
-            <li><a href="#" class="active">O nama</a></li>
-            <li><a href="../pages/paketi.html">Paketi</a></li>
-            <li><a href="../pages/zakaži-konsultaciju.html">Zakaži konsultaciju</a></li>
+            <li><a class="nav-link" href="../index.html">Početna</a></li>
+            <li><a href="#" class="nav-link active">O nama</a></li>
+            <li><a class="nav-link" href="../pages/paketi.html">Paketi</a></li>
+            <li><a class="nav-link" href="../pages/zakaži-konsultaciju.html">Zakaži konsultaciju</a></li>
         </ul>
-        <a href="#" class="icon" onclick="myFunction()">&#x2630;</a>
+        <div id="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
     </nav>
-    <!----------------- End of navbar ----------------->
+    <!-- ------ --> 
 
-    <!----------------- First section ----------------->
+    <!-- ------ --> 
     <div class="div1onama">
         <h1>O nama</h1>
-        <br>
         <div class="container1onama">
             <div class="container11onama">
                 <h2 id="h21Div1onama">Naša misija je jednostavna...</h2>
-                <br>
                 <p id="p1Div1onama"><b>ANGRY WEDDING</b> je nastao jednog lepog letnjeg dana 2014. u Beogradu, sa željom
                 da u potpunosti ispuni ideju jedne divne mlade devojke o njenom venčanju iz snova. <br> Od tog dana, jedina misija nam je da takvih devojaka i momaka bude što više!
                 </p>
@@ -176,9 +179,9 @@
 
         </div>
     </div>
-    <!----------------- End of first section ----------------->
+    <!-- ------ --> 
 
-    <!----------------- Second section ----------------->
+    <!-- ------ --> 
     <div class="div2onama">
         <div class="container2onama">
             <div class="container22onama">
@@ -194,22 +197,20 @@
 
         </div>
     </div>
-    <!----------------- End of second section ----------------->
+    <!-- ------ --> 
 
-    <!----------------- Third section ----------------->
+    <!-- ------ --> 
     <div class="div3onama">
 
         <div class="container3onama">
             <div class="container31onama">
                 <h2 id="h21Div3onama">Rekli su o nama...</h2>
-                <br>
                 <p id="p1Div3onama">
-                   "Često se suprug i ja šalimo kako uz Angry Wedding ni na sekund nismo bili <i>angry</i>,
-                   baš smo uživali u pripremi... " Sanja, 33
-                   <br><br><br>
+                   "Često se suprug i ja šalimo kako uz Angry Wedding ni na sekund nismo bili <i>angry</i>, baš smo uživali u pripremi... " Sanja, 33
+                   <br><br>
                    "Ja sam stvarno detaljista... Volim da sve bude perfektno, a ubeđenja sam da nikada nije perfektno ako ga sama ne odradim.
                    Tadašnji verenik me je ubedio da poverim organizaciju ovoj kompaniji i čim je još uvek muž... Vidite da se nisam pokajala!" Milena, 35
-                    <br><br><br>
+                    <br><br>
                     "Mirna mi glava, mirna mi žena... Kunem se u ovu ekipu za organizaciju događaja i svima ih preporučujem!" Stefan, 27
                 
                 </p>
@@ -221,19 +222,19 @@
 
         </div>
     </div>
-    <!----------------- End of third section ----------------->
+    <!-- ------ --> 
 
-    <!----------------- Fourth section ----------------->
+    <!-- ------ --> 
     <div class="div4onama">
         <h2 id="h21Div4onama">Galerija naših događaja</h2>
         <!-- SlidesJS Required: Start Slides -->
         <!-- The container is used to define the width of the slideshow -->
         <div class="container">
             <div id="slides">
-                <img src="/img/galerija1.jpg">
-                <img src="/img/galerija2.jpg">
-                <img src="/img/galerija3.jpg">
-                <img src="/img/galerija4.jpg">
+                <img src="../img/galerija1.jpg">
+                <img src="../img/galerija2.jpg">
+                <img src="../img/galerija3.jpg">
+                <img src="../img/galerija4.jpg">
 
                 <a href="#" class="slidesjs-previous slidesjs-navigation"><i class="fas fa-chevron-left"></i></a>
                 <a href="#" class="slidesjs-next slidesjs-navigation"><i class="fas fa-chevron-right"></i></a>
@@ -244,24 +245,24 @@
         <!-- End SlidesJS Required: Start Slides -->
 
     </div>
-    <!----------------- End of fourth section ----------------->
+    <!-- ------ --> 
 
-   <!----------------- Footer ----------------->
+   <!-- ------ --> 
    <footer>
     <div class="footer-container">
         <div class="col col-flex">  
-            <img class="img-footer" src="/img/logoAW.png" alt="angryWedding-logo">
+            <img class="img-footer" src="../img/logoAW.png" alt="angryWedding-logo">
         </div>
         <div class="col col-contact col-flex1">
             <h2>Kontakt informacije</h2>
             <ul class="list-footer">
                 <li>
                     <i class="fa fa-map-marker-alt"></i>
-                    <span>Adresa: Bulevar Oslobođenja 293</span> 
+                    <span>Adresa: Vojvode Stepe 174</span> 
                 </li>
                 <li>
                     <i class="fa fa-phone-alt"></i>
-                    <span><a href="tel:+3816503538004">060-35-38-004</a></span>
+                    <span>060/35-38-004</span>
                 </li>
                 <li>
                     <i class="fa fa-clock"></i>
@@ -285,21 +286,21 @@
     </div>
                 
 </footer>
-<!----------------- End of footer ----------------->
+<!-- ------ --> 
 
 <!-- SlidesJS Required: Initialize SlidesJS with a jQuery doc ready -->
 <script>
     $(function () {
         $('#slides').slidesjs({
-            width: 940,
-            height: 528,
+            width: 200,
+            height: 100,
             navigation: false
         });
     });
 </script>
 <!-- End SlidesJS Required -->
 
-<script src="./js/main.js"></script>
+<script src="../js/main.js"></script>
 
 </body>
 

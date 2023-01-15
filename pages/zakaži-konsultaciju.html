@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zakazi konsultaciju | Angry Wedding</title>
+    <link rel="shortcut icon" type="image/jpg" href="../img/logoAW.png"/>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+</head>
+
+<body>
+    <!-- ------ --> 
+    <nav>
+        <div class="logo">
+            <a href="../index.html"><img class="nav-logo" src="../img/logoAW.png" alt="angryWedding-logo" /></a>
+        </div>
+        <ul class="menu">
+            <li><a class="nav-link" href="../index.html">Početna</a></li>
+            <li><a class="nav-link"  href="../pages/o-nama.html">O nama</a></li>
+            <li><a class="nav-link"  href="../pages/paketi.html">Paketi</a></li>
+            <li><a class="nav-link active"  href="#">Zakaži konsultaciju</a></li>
+        </ul>
+        <div id="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+    <!-- ------ --> 
+
+    <div class="pageKonsultacije">
+        <!-- ------ --> 
+        <section class="form">
+            <div id="div1">
+                <div class="inputSpace">
+                    <label for="name">Ime i prezime:</label>
+                    <input type="text" id="name" name="name">
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email">
+
+                    <button class="next next1">Dalje</button>
+                </div>
+            </div>
+
+            <div class="hidden" id="div2">
+                <div class="inputSpace">
+                    <label for="radioinputs">Izaberite paket: </label>
+                    <div id="radioinputs">
+                        <span>
+                            <input type="radio" name="tip" id="dream-white" value="Dream White Wedding">
+                            <label for="dream-white">Dream White Wedding</label>
+                        </span>
+
+                        <span>
+                            <input type="radio" name="tip" id="crazy-party" value="Crazy Party Wedding">
+                            <label for="crazy-party">Crazy Party Wedding</label>
+                        </span>
+
+                        <span>
+                          <input type="radio" name="tip" id="getaway" value="Getaway Wedding">
+                          <label for="getaway">Getaway Wedding</label>
+                        </span>
+
+                        <span>
+                            <input type="radio" name="tip" id="napravi-miks" value="Napravi svoj miks">
+                            <label for="napravi-miks">Napravi svoj miks</label>
+                        </span>
+                    </div>
+
+                    <button class="next next2">Dalje</button>
+                </div>
+
+                <div class="hidden error error2 ">
+                    Morate označiti paket za koji ste zainteresovani!
+                </div>
+
+            </div>
+
+            <div class="hidden" id="div3">
+                <div class="inputSpace">
+                    <label for="date">Unesite datum konsultacija:</label>
+                    <input type="date" name="date" id="date" value="">
+                    <button class="next next3">Dalje</button>
+                </div>
+
+                <div class="hidden error error3 ">
+                    Unesite ispravan datum!
+                </div>
+            </div>
+
+            <div class="submitSpace hidden" id="div4">
+                <button class="submit">Zakažite termin</button>
+
+            </div>
+        </section>
+        <!-- ------ --> 
+
+        <section class="hidden tableSection">
+            <table class="table">
+                <h2>Uspešno ste zakazali konsultaciju!</h2>
+                <tr>
+                    <th scope="col">Ime i prezime</th>
+                    <th scope="col">Datum</th>
+                    <th scope="col">Paket</th>
+                </tr>
+            </table>
+        </section>
+        
+        <!-- ------ --> 
+        <footer>
+            <div class="footer-container">
+                <div class="col col-flex">
+                    <img class="img-footer" src="../img/logoAW.png" alt="angryWedding-logo">
+                </div>
+                <div class="col col-contact col-flex1">
+                    <h2>Kontakt informacije</h2>
+                    <ul class="list-footer">
+                        <li>
+                            <i class="fa fa-map-marker-alt"></i>
+                            <span>Adresa: Vojvode Stepe 174</span>
+                        </li>
+                        <li>
+                            <i class="fa fa-phone-alt"></i>
+                            <span>060/35-38-004</span>
+                        </li>
+                        <li>
+                            <i class="fa fa-clock"></i>
+                            <span>Radno vreme: <span>Ponedeljak - Subota: 09h-17h</span>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col col-flex1">
+                    <h2>Zapratite nas</h2>
+                    <div class="col-flex full">
+                        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-square icon fa-2x"></i></a>
+                        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram icon fa-2x"></i></a>
+                        <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter-square icon fa-2x"></i></a>
+                        <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube-square icon fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+        <!-- ------ --> 
+
+    </div>
+
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

@@ -5,26 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paketi | Angry Wedding</title>
-    <link rel="shortcut icon" type="image/jpg" href="../img/logo.png" />
+    <link rel="shortcut icon" type="image/jpg" href="../img/logoAW.png" />
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 </head>
+
 <body class="paketi-body">
-    <!----------------- Navbar ----------------->
+    <!-- ------ --> 
     <nav>
         <div class="logo">
-            <a href="../index.html"><img src="../img/logoAW.png" alt="angryWedding-logo" /></a>
+            <a href="../index.html"><img class="nav-logo" src="../img/logoAW.png" alt="angryWedding-logo" /></a>
         </div>
         <ul class="menu">
-            <li><a href="../index.html">Početna</a></li>
-            <li><a href="../pages/o-nama.html">O nama</a></li>
-            <li><a href="#" class="active">Paketi</a></li>
-            <li><a href="../pages/zakaži-konsultaciju.html">Zakaži konsultaciju</a></li>
+            <li><a class="nav-link" href="../index.html">Početna</a></li>
+            <li><a class="nav-link" href="../pages/o-nama.html">O nama</a></li>
+            <li><a class="nav-link active" href="#">Paketi</a></li>
+            <li><a class="nav-link" href="../pages/zakaži-konsultaciju.html">Zakaži konsultaciju</a></li>
         </ul>
-        <a href="#" class="icon" onclick="myFunction()">&#x2630;</a>
+        <div id="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
     </nav>
-    <!----------------- End of navbar ----------------->
+    <!-- ------ --> 
 
     <h1 class="paketi">Naša ponuda</h1>
     <div class="container-paketi">
@@ -72,7 +77,7 @@
         </div>
     </div>
 
-    <!----------------- Footer ----------------->
+    <!-- ------ --> 
     <footer>
         <div class="footer-container">
             <div class="col col-flex">  
@@ -83,15 +88,15 @@
                 <ul class="list-footer">
                     <li>
                         <i class="fa fa-map-marker-alt"></i>
-                        <span>Adresa: Bulevar Oslobođenja 293</span> 
+                        <span>Adresa: Vojvode Stepe 174</span> 
                     </li>
                     <li>
                         <i class="fa fa-phone-alt"></i>
-                        <span><a href="tel:+3816503538004">060-35-38-004</a></span>
+                        <span>060/35-38-004</span>
                     </li>
                     <li>
                         <i class="fa fa-clock"></i>
-                        <span>Radno vreme: <span>Ponedeljak - Subota: 09h-17h<br><span style="padding-left: 39%;"></span></span>
+                        <span>Radno vreme: <span>Ponedeljak - Subota: 09h-17h</span>
                     </span>
                         
                     </li>
@@ -111,9 +116,9 @@
         </div>
                     
     </footer>
-    <!----------------- End of footer ----------------->
+    <!-- ------ --> 
 
-    <script src="../js/main.js"></script>
+    <script src="../js//main.js"></script>
 
 </body>
 

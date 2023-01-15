@@ -8,120 +8,119 @@
     <title>Angry Wedding</title>
     <link rel="shortcut icon" type="image/jpg" href="img/logoAW.png"/>
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" /><!-- IKONICE  -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <!----------------- Navbar ----------------->
+    <!-- ------ --> 
     <nav>
         <div class="logo">
-            <a href="#"><img src="img/logoAW.png" alt="angryWedding-logo" /></a>
+            <a href="#"><img class="nav-logo" src="img/logoAW.png" alt="angryWedding-logo" /></a>
         </div>
         <ul class="menu">
-            <li><a href="#" class="active">Početna</a></li>
-            <li><a href="pages/o-nama.html">O nama</a></li>
-            <li><a href="pages/paketi.html">Paketi</a></li>
-            <li><a href="pages/zakaži-konsultaciju.html">Zakaži konsultaciju</a></li>
+            <li><a class="nav-link active" href="#">Početna</a></li>
+            <li><a class="nav-link" href="pages/o-nama.html">O nama</a></li>
+            <li><a class="nav-link" href="pages/paketi.html">Paketi</a></li>
+            <li><a class="nav-link" href="pages/zakaži-konsultaciju.html">Zakaži konsultaciju</a></li>
         </ul>
-       <!-- <a href="#" class="icon" onclick="myFunction()">&#x2630;</a>  na kraju uradi ovo-->
+        <div id="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
     </nav>
-    <!----------------- End of navbar ----------->
+    <!-- ------ --> 
 
-    <!----------------- First section ----------------->
+    <!-- ------ --> 
     <div class="section1">
         <div class="left">
             <div class="text">
-                Ako ste gledali film "Wedding planner",<br/>mi vam nećemo ukrasti muža kao JLo,<br/>ali će vam foru sa venčanja ukrasti svi!
-                <br/><br/>Ako niste gledali, pogledajte, <br/>pa nam se vratite!
+                Ako ste gledali film "Wedding planner", mi vam nećemo ukrasti muža kao JLo,ali će vam foru sa venčanja ukrasti svi!
+                <br/>Ako niste gledali, pogledajte, pa nam se vratite!
             </div>
-            <br/>
             <button class="btnFirstSection"><a href="./pages/zakaži-konsultaciju.html">Zakaži konsultaciju</a></button>
         </div>
     </div>
-    <!----------------- End of first section ----------------->
+    <!-- ------ --> 
  
-    <!----------------- Second section ----------------->
+    <!-- ------ --> 
     <section class="section2">
         <h1>Pogledaj događaje koje smo već organizovali...</h1>
-        <div class="container2"> <!--je l može div class section 2-->
+        <div class="container2">
             <div class="card">
                 <h2>Dream White Wedding</h2>
                 <i>Hilton</i>
-                <br>
                 <a href="pages/paketi.html"><img src="img/weddingPic1.jpg" alt="vencanje-dream-white" width="400px"></a>
             </div>
             <div class="card">
                 <h2>Crazy party wedding </h2>
                 <i>Leto</i>
-                <br>
                 <a href="pages/paketi.html"><img src="img/weddingPic2.jpg" alt="vencanje-crazy-party" width="400px"></a>
             </div>
             <div class="card">
                 <h2>Getaway wedding</h2>
                 <i>Costa Rica</i>
-                <br>
                 <a href="pages/paketi.html"><img src="img/weddingPic3.jpg" alt="vencanje-getaway" width="400px"></a>
             </div>
         </div>
     </section>
-    <!----------------- End of second section ----------------->
+    <!-- ------ --> 
 
-    <!----------------- Third section ----------------->
+    <!-- ------ --> 
     <section class="section3">
         <h1>Kontakt</h1>
         <div class="container3">
             <div class="contact">
                 <form action="">
                     <label for="contact-name">Ime i prezime</label>
-                    <br>
+                    
                     <input class="input" type="text" id="contact-name" name="contact-name">
-                    <br>
+                    
                     <label for="contact-email">Email adresa</label>
-                    <br>
+                    
                     <input class="input" type="email" id="contact-email" name="contact-email">
-                    <br>
+                    
                     <label for="contact-phone">Broj telefona</label>
-                    <br>
-                    <input class="input" type="tel" id="contact-phone" name="contact-phone" pattern="[0-9]{​​​​​3}​​​​​-[0-9]{​​​​​2}​​​​​-[0-9]{​​​​​3}​​​​​">
-                    <br>
+                    
+                    <input class="input" type="tel" id="contact-phone" name="contact-phone">
+                    
                     <label for="contact-message">Vaša poruka</label>
-                    <br>
+                    
                     <textarea name="contact-message" id="" cols="30" rows="6"></textarea>
-                    <br>
+                    
                     <input class="btnContact" type="submit" value="Pošalji">
 
                 </form>
             </div>
             <div class="map">
                 <h2>Posetite nas i otkrijte gde se planira magija...</h2>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2832.7781611827804!2d20.476251415803183!3d44.76493878784818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a70fe5828b487%3A0x2b2492adee656ba0!2z0JHRg9C70LXQstCw0YAg0J7RgdC70L7QsdC-0ZLQtdGa0LAgMjkzLCDQkdC10L7Qs9GA0LDQtA!5e0!3m2!1ssr!2srs!4v1606554963167!5m2!1ssr!2srs"
-                    width="600" height="350" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2832.3037145135468!2d20.473295815157694!3d44.77461318721135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a7059974e00ab%3A0xacbd1ba9de15e460!2z0JLQvtGY0LLQvtC00LUg0KHRgtC10L_QtSAxNzQsINCR0LXQvtCz0YDQsNC0!5e0!3m2!1ssr!2srs!4v1673719059329!5m2!1ssr!2srs" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="border:0;"></iframe>
             </div>
         </div>
     </section>
-    <!----------------- End of third section ----------------->
+    <!-- ------ --> 
 
-    <!----------------- Footer ----------------->
+    <!-- ------ --> 
     <footer>
         <div class="footer-container">
             <div class="col col-flex">
                 <img class="img-footer" src="img/logoAW.png" alt="angryWedding-logo">
             </div>
-            <!-- promeni imena klasama -->
             <div class="col col-contact col-flex1"> 
                 <h2>Kontakt informacije</h2>
                 <ul class="list-footer">
                     <li>
                         <i class="fa fa-map-marker-alt"></i>
-                        <span>Adresa: Bulevar Oslobođenja 293</span> 
+                        <span>Adresa: Vojvode Stepe 174</span> 
                     </li>
                     <li>
                         <i class="fa fa-phone-alt"></i>
-                        <span><a href="tel:+3816503538004">060-35-38-004</a></span>
+                        <span>060/35-38-004</span>
                     </li>
                     <li>
                         <i class="fa fa-clock"></i>
-                        <span>Radno vreme: <span>Ponedeljak - Subota: 09h-17h<br></span>
+                        <span>Radno vreme: <span>Ponedeljak - Subota: 09h-17h</span>
                     </span>
                     </li>
                 </ul>
@@ -129,10 +128,8 @@
             <div class="col col-flex1">
                 <h2>Zapratite nas</h2>
                 <div class="col-flex full">
-                    <a href="https://www.facebook.com/" target="_blank"><i
-              class="fab fa-facebook-square icon fa-2x" ></i></a>
-                    <a href="https://www.instagram.com/" target="_blank"><i
-              class="fab fa-instagram icon fa-2x"></i></a>
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square icon fa-2x" ></i></a>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram icon fa-2x"></i></a>
                     <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter-square icon fa-2x"></i></a>
                     <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube-square icon fa-2x"></i></a>
                 </div>
@@ -140,7 +137,7 @@
         </div>
                     
     </footer>
-    <!----------------- End of footer ----------------->
-    <script src="js/main.js"></script> 
+    <!-- ------ --> 
+    <script src="js//main.js"></script> 
 </body>
 </html>

@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body {
+    position: relative;
 }
 
 /* ================================NAVBAR====================================== */
@@ -15,21 +16,21 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 0 10%;
+    /* Kad ses skroluje da ostane gore zalepljeno */
     position: sticky;
     top: 0;
-    height: 10vh;
     background-color: #e6cda5;
     z-index: 11;
+    min-height: 100px;
 }
 
-.logo img {
+.nav-logo {
     cursor: pointer;
-    min-height: 10vh;
-    max-height: 10vh;
-    padding-top: 20%;
+    height: 80px;
 }
 
 .menu {
+    /* viewport width - 40 unita sirine ekrana */
     width: 40vw;
     display: flex;
     justify-content: space-between;
@@ -37,13 +38,14 @@ nav {
 }
 
 .menu li {
-    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 1.1rem;
+    /* Da nema bullet point */
     list-style: none;
 }
 
 .menu li a {
+    /* Da ne bude podvuceno */
     text-decoration: none;
     color: #653239;
     transition: .5s;
@@ -54,18 +56,25 @@ nav {
 .menu li a.active,
 .menu li a:hover {
     background:#fff;
-    color: #653239;
 }
 
-nav .icon {
+#hamburger {
     display: none;
+    cursor: pointer;
 }
 
-/* ================================ KRAJ NAVBAR ====================================== */
+.bar {
+    display: block;
+    width: 40px;
+    height: 5px;
+    margin: 8px auto;
+    transition: all 0.3s ease;
+    background-color: white;
+}
 
 /* ================================ INDEX.HTML ====================================== */
 
-/* ---------- First section ---------- */
+/* ----- */
 
 .section1 {
     width: 100%;
@@ -79,7 +88,6 @@ nav .icon {
 }
 
 .left {
-    flex: 1;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -87,21 +95,20 @@ nav .icon {
 }
 
 .text {
-    font-family: 'Montserrat', sans-serif;
-    background: #e6cda5; opacity:0.8;
+    background: #e6cda5; 
+    opacity:0.8;
     color: rgb(9, 9, 9);
-    font-size: 2.5rem;
+    font-size: 1.7rem;
     font-weight: 600;
     letter-spacing: 1px;
-    text-shadow: 2px 2px rgba(255, 255, 255, 0.2);
+    padding: 20px 30px;
 }
 
 .btnFirstSection {
-    width: 20%;
+    width: 30%;
     margin-top: 4%;
-    font-size: 1.9rem;
-    padding: 0.5rem 2rem;
-    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    padding: 0.8rem 2rem;
     font-weight: 600;
     letter-spacing: 0.1rem;
     border-radius: 10px;
@@ -110,12 +117,8 @@ nav .icon {
 }
 
 .btnFirstSection:hover {
-    border: 1px solid rgb(90, 90, 90);
     background-color: #fff;
-    box-shadow: 0px 1px 1px 1px rgb(151, 150, 150);
     cursor: pointer;
-    transform: scale(1.1);
-    transition-duration: 0.5s;
 }
 
 button a {
@@ -123,29 +126,24 @@ button a {
     color: #653239;
 }
 
-/* ---------- End of first section ---------- */
-
-/* ---------- Second section ---------- */
+/* ----- */
 
 .section2 h1 {
     font-size: 2.5rem;
     text-align: center;
     padding-top: 5%;
     padding-bottom: 5%;
-    font-family: 'Roboto', sans-serif;
     letter-spacing: 0.3rem;
 }
 
 .container2 {
-    max-width: 100vw;
+    width: 100%;
     height: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 1;
-    padding-left: 10%;
-    padding-right: 10%;
-    margin-bottom: 5%;
+    padding-left: 2%;
+    padding-right: 2%;
     flex-wrap: wrap;
 }
 
@@ -156,6 +154,7 @@ button a {
     align-items: center;
     border-radius: 20px;
     background-color: #e6cda5;
+    margin-bottom: 5%;
 }
 
 .card img {
@@ -165,13 +164,10 @@ button a {
 
 .card h2 {
     padding: 10% 0;
-    font-family: 'Montserrat', sans-serif;
     font-size: 1.7rem;
 }
 
-/* ---------- End of second section ---------- */
-
-/* ---------- Third section ---------- */
+/* ----- */
 
 .section3 {
     height: max-content;
@@ -183,7 +179,6 @@ button a {
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
-    padding-left: 10%;
     padding-bottom: 5%;
     flex-wrap: wrap;
 }
@@ -191,7 +186,6 @@ button a {
 .section3 h1 {
     font-size: 3rem;
     text-align: center;
-    font-family: 'Lato', sans-serif;
     letter-spacing: 0.3rem;
     padding-bottom: 5%;
     padding-top: 5%;
@@ -205,7 +199,7 @@ button a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: flex-start ;
 }
 
 .input , #contact-name{
@@ -219,7 +213,6 @@ button a {
 
 .input:focus {
     outline: none;
-    background: linear-gradient(0deg, rgba(177, 113, 219, .35) 2%, rgba(177, 113, 219, .30) 48%, rgba(177, 113, 219, .25) 100%);
     border-radius: 5px;
 }
 
@@ -227,7 +220,6 @@ button a {
     font-size: 1.3rem;
     margin-top: 5%;
     margin-bottom: 2%;
-    font-family: 'Montserrat', sans-serif;
 }
 
 .contact form textarea {
@@ -236,7 +228,7 @@ button a {
     border: none;
     border-radius: 10px;
     outline: none;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     padding: 5%;
 }
 
@@ -247,9 +239,7 @@ button a {
     border-radius: 10px;
     border: 1px solid #000;
     text-transform: uppercase;
-    transition: color 0.3s, background-color 0.3s;
     font-size: 1.2rem;
-    font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     letter-spacing: 0.2rem;
     cursor: pointer;
@@ -269,15 +259,10 @@ button a {
 
 .map h2 {
     text-align: center;
-    font-family: 'Montserrat', sans-serif;
     margin-bottom: 5%;
     padding-top: 0;
-    font-size: 1.7rem;
+    font-size: 1.4rem;
 }
-
-/* ---------- End of third section ---------- */
-
-/* ============================ KRAJ ZA INDEX.HTML======================== */
 
 /* ========================== FOOTER ==================================*/
 
@@ -322,19 +307,12 @@ footer {
 
 .list-footer li span {
     padding-left: 2%;
-    font-family: 'Roboto', sans-serif;
     font-size: 1.1rem;
-}
-
-.list-footer li span a {
-    text-decoration: none;
-    color: #fff;
 }
 
 .icon {
     width: 100%;
     color: #fff;
-    flex-basis: auto;
 }
 
 .full {
@@ -355,10 +333,7 @@ footer {
 
 .col h2 {
     margin-bottom: 10px;
-    font-family: 'Montserrat', sans-serif;
 }
-
-/* ========================== KRAJ FOOTER ==================================*/
 
 /* ========================= O-NAMA.HTML ============================ */
 
@@ -368,16 +343,17 @@ footer {
     background-image: linear-gradient(90deg, #653239 0%, #e6cda5 100%);
     height: auto;
 }
+
 .div1onama h1{
     margin: 0;
     text-align: center;
-    font-family: 'Lato', sans-serif;
     letter-spacing: 0.3rem;
     font-size: 3.5rem;
     color: #e6cda5;
     margin-bottom: 0;
     padding: 3% 0%;
 }
+
 .container1onama{
     display: flex;
     justify-content:space-around ;
@@ -390,36 +366,39 @@ footer {
     min-width: 100%;
     max-width: 100%;
 }
+
 .container11onama{
     width:40%;
     height: 100%;
 }
+
 .container12onama img{
-  width: 15rem;
   height: 15rem;
   padding-bottom: 8%;
 }
+
 #h21Div1onama{
-    font-family: "Montserrat",sans-serif;
     padding-top:4% ;
     font-size: 32px;
     color: #e6cda5;
     margin-bottom: 0%;
 }
+
 #p1Div1onama{
-    font-family: "Montserrat",sans-serif;
     font-size: 21px;
     color: #e6cda5;
     width: 45vw;
     margin-top:0px;
     padding-bottom: 8%;
 }
+
 .div2onama{
     background-image: linear-gradient(270deg, #653239 0%, #e6cda5 100%);
     margin: 0;
     margin-top: 0;
     height: auto;
 }
+
 .container2onama{
     display: flex;
     justify-content:space-evenly ;
@@ -428,8 +407,8 @@ footer {
     flex-wrap: wrap-reverse;
 
 }
+
 #h21Div2onama{
-    font-family: "Montserrat",sans-serif;
     margin-top:0 ;
     margin-bottom: 4%;
     margin-left: 20%;
@@ -437,14 +416,15 @@ footer {
     color: #e6cda5;
     padding-top: 15%;
 }  
+
 .container2onama img{
     position: static;
     width: 15rem;
     height: 15rem;
     border-radius: 20px;   
 }
+
 #p1Div2onama{
-    font-family: "Montserrat",sans-serif;
     margin-top:0 ;
     margin-left: 20%;
     font-size: 21px;
@@ -453,12 +433,14 @@ footer {
     padding-bottom: 50px;
     margin-bottom: 50px;
 }
+
 .div3onama{
     margin-top: 0;
     margin-bottom: 0;
     background-image: linear-gradient(90deg, #653239 0%, #e6cda5 100%);
     height: auto;
 }
+
 .container3onama {
     display: flex;
     justify-content:space-evenly ;
@@ -466,40 +448,40 @@ footer {
     margin-top: 0;
     flex-wrap: wrap;
 }
+
 .container3onama img{
     width: 15rem;
     height: 15rem;
 }
+
 #h21Div3onama{
-    font-family: "Montserrat",sans-serif;
     margin-top: 0; 
     font-size: 32px;
     color: #e6cda5;
     padding-top: 7%;   
 }
+
 #p1Div3onama{
-    font-family: "Montserrat",sans-serif;
     font-size: 21px;
     color: #e6cda5;
     width: 45vw;
     margin-bottom: 0;
     padding-bottom: 10%;
 }
+
 .div4onama{
     margin-top: 0;
     height: auto;
     background-image:linear-gradient(to top, #653239 0%, #e6cda5 100%);
 }
+
 #h21Div4onama{
-    font-family: "Montserrat",sans-serif;
     text-align: center;
     font-size: 3rem;
     margin-top: 0;
-    color: #e6cda5;
+    color: #653239;
     padding: 3% 0;
 }
-
-/* ==================================== KRAJ ZA O-NAMA.HTML ======================================= */
 
 /* ==================================== POCETAK PAKETI.HTML ======================================= */
 
@@ -511,11 +493,11 @@ footer {
 
 .paketi {
     text-align: center;
-    font-family: 'Montserrat', sans-serif;
     letter-spacing: 0.3rem;
     font-size: 3rem;
     padding-top: 5vh;
 }
+
 .container-paketi {
     background: #e6cda5;
     display: flex;
@@ -541,21 +523,18 @@ footer {
 }
 
 .desc h2 {
-    font-family: "Montserrat", sans-serif;
     font-size: 2rem;
     color: #653239;
     letter-spacing: 0.3rem  ;
 }
 
 .desc p {
-    font-family: "Montserrat", sans-serif;
     font-size: 1.4rem;
     padding: 4% 0;
     color: #653239;
 }
 
 .desc button {
-    font-family: "Montserrat", sans-serif;
     font-size: 1.2rem;
     font-weight: 600;
     padding: 1.5% 4%;
@@ -568,9 +547,6 @@ footer {
 
 .desc button:hover {
     background: #000;
-    border: 1px solid #000;
-    transform: scale(1.1);
-    transition-duration: 0.5s;
 }
 
 .desc button a {
@@ -578,4 +554,930 @@ footer {
     color: #e6cda5;
 }
 
-/* ==================================== KRAJ PAKETI.HTML ======================================= */
+/* ================= ZAKAZI-KONSULTACIJE.HTML ======================== */
+.pageKonsultacije {
+    background-image: linear-gradient(90deg, #653239 0%, #e6cda5 100%);
+    background-size: cover;
+    background-position: absolute;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5%;
+    height: min-content;
+}
+
+.inputSpace {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+}
+
+.hidden {
+    visibility: hidden;
+    height: 0;
+}
+
+input[type="text"], input[type="email"] {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+    width: 60%;
+    text-align: center;
+    line-height: 2rem;
+    letter-spacing: 0.1rem;
+}
+
+label {
+    font-size: 1.2rem;
+}
+
+input {
+    margin-bottom: 25px;
+}
+
+#div1,
+#div2,
+#div3,
+#div4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+}
+
+.next {
+    border: none;
+    width: 50%;
+    margin: 5% 15%;
+    padding: 0.4rem 0;
+    border-radius: 6px;
+    background-color: #e6cda5;
+    color: #643239;
+    letter-spacing: 0.1rem;
+}
+
+.next:hover {
+    color: white;
+    background-color: #643239;
+    cursor: pointer;
+}
+
+#radioinputs {
+    display: flex;
+    flex-direction: column;
+    padding-top: 3%;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 5%;
+}
+
+input[type="date"] {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+    width: 50%;
+    line-height: 2rem;
+    font-size: 1rem;
+}
+
+.submitSpace {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 3% 0;
+    margin-bottom: 0;
+    background-color: transparent;
+}
+
+.submit {
+    border: none;
+    width: 40%;
+    padding: 0.7rem;
+    border: 1px solid rgb(78, 156, 58);
+    border-radius: 6px;
+    background-color: rgb(54, 112, 39);
+    color: white;
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+}
+
+.submit:hover {
+    color: white;
+    background-color: rgb(50, 134, 29);
+    cursor: pointer;
+}
+
+.tableSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    padding-bottom: 10%;
+}
+
+.tableSection h2 {
+    letter-spacing: 0.1rem;
+    font-size: 1.4rem;
+}
+
+.table tr th {
+    width: 20%;
+    padding: 1rem 0;
+    font-size: 1.1rem;
+}
+
+.table tr td {
+    text-align: center;
+    padding: 10px;
+    background-color: #e6cda5;
+    border-radius: 5px;
+    font-size: 1.1rem;
+}
+
+.error {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 1.2rem;
+    padding: 2.5% 0;
+    margin: 2% 0;
+    background-color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+    border-radius: 1rem;
+    text-align: center;
+    width: 50%;
+}
+
+/* ========== MEDIA QUERY ================= */
+@media only screen and (max-width: 480px) {
+    /* NAVBAR */
+    .nav-logo {
+        max-height: 60px;
+    }
+    nav {
+        min-height: 80px;
+    }
+
+    .bar {
+        width: 30px;
+        height: 4px;
+    }
+
+    #hamburger {
+        display: block;
+        width: 20px;
+    }
+
+    #hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #hamburger.active .bar:nth-child(1) {
+        transform: translateY(12px) rotate(45deg);
+    }
+
+    #hamburger.active .bar:nth-child(3) {
+        transform: translateY(-12px) rotate(-45deg);
+    }
+
+    .menu {
+        position: fixed;
+        left: -100%;
+        top: 80px;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: white;
+    }
+    .menu li {
+        margin: 10px 0;
+    }
+
+    .menu.active {
+        left: 0;
+    }
+
+    .nav-link {
+        font-size: 1.1rem;
+    }
+
+    /* FIRST SECTION */
+
+    .text {
+        font-size: 1.5rem;
+        padding: 20px;
+    }
+
+    .btnFirstSection {
+        font-size: 1.4rem;
+        width: 75%;
+    }
+
+    /* SECOND SECTION */
+    .section2 {
+        padding: 50px 0 30px 0;
+    }
+    .container2 {
+        padding: 0 20px;
+    }
+    .section2 h1 {
+        font-size: 1.5rem;
+        letter-spacing: 0;
+        padding: 0 10% 10% 10%;
+    }
+
+    .card h2 {
+        font-size: 1.3rem;
+        padding: 20px 0;
+    }
+
+    .card img {
+        max-width: 330px;
+    }
+
+    .card {
+        margin-bottom: 25px;
+        width: 100%;
+    }
+
+    /* THIRD SECTION */
+
+    .section3 h1 {
+        font-size: 1.7rem;
+        padding-top: 20px;
+    }
+
+    .container3 {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+    .contact {
+        width: 75%;
+    }
+
+    .contact form {
+        align-items: center;
+    }
+
+    .contact form label {
+        font-size: 1.1rem;
+    }
+
+    .input , #contact-name{
+        font-size: 1rem;
+        line-height: 1.2rem;
+    }
+
+    .contact form textarea {
+        font-size: 1rem;
+    }
+
+    .btnContact {
+        font-size: 1rem;
+        letter-spacing: 0.1rem;
+    }
+
+    .map {
+        margin-top: 60px;
+    }
+
+    .map iframe {
+        width: 80vw;
+    }
+
+    /* FOOTER */
+    .footer-container {
+        flex-direction: column;
+        justify-content: center;
+        padding: 30px 0;
+    }
+
+    .col-contact {
+        margin: 20px 0;
+    }
+
+    .img-footer {
+        width: 100px;
+    }
+
+    .col {
+        width: 100%;
+    }
+
+    .col-flex {
+        justify-content: center;
+    }
+
+    .col-flex h2 {
+        font-size: 1.2rem;
+    }
+
+    .list-footer li span {
+        font-size: 1rem;
+    }
+
+    .full {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    /* O NAMA */
+    .div1onama {
+        background-color: #653239;
+        background-image: none;
+    }
+    .div1onama h1 {
+        font-size: 2.5rem;
+    }
+
+    .container11onama, .container2onama {
+        width: 100%;
+        padding: 0 25px;
+    }
+
+    #h21Div1onama {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+    }
+
+    .div2onama {
+        background-color: #e6cda5;
+        background-image: none;
+    }
+
+    #h21Div2onama {
+        color: #653239;
+        font-size: 1.3rem;
+        margin: 0 0 20px 0;
+    }
+
+    #p1Div1onama {
+        width: 100%;
+    }
+
+    #p1Div2onama {
+        width: 100%;
+        margin: 0;
+        color: #653239;
+    }
+
+    .div3onama {
+        background-color: #653239;
+        background-image: none;
+    }
+
+    .container3onama {
+        width: 100%;
+        padding: 0 25px;
+    }
+
+    .container31onama {
+        width: 100%;
+    }
+
+    #h21Div3onama {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+        padding-top: 15%;
+    }
+
+    #p1Div3onama {
+        width: 100%;
+    }
+
+    .div4onama {
+        padding-top: 20px;
+    }
+
+    #h21Div4onama {
+        font-size: 1.7rem;
+        color: #653239;
+    }
+
+    /* PAKETI */
+    .paketi {
+        font-size: 2rem;
+    }
+
+    .container-paketi {
+        flex-direction: column;
+        justify-content: center;
+        margin: 5%;
+        height: min-content;
+        padding: 20px;
+    }
+
+    .container-paketi img {
+        width: 80%;
+        margin: 0;
+        border-radius: 10px;
+    }
+
+    .desc {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .desc h2 {
+        font-size: 1.4rem;
+        font-weight: 700;
+        letter-spacing: 0.1rem;
+        margin-top: 20px;
+    }
+
+    .desc p {
+        font-size: 1rem;
+    }
+
+    .desc button {
+        font-size: 1.1rem;
+        padding: 10px;
+    }
+
+    /* KONSULTACIJE */
+    .inputSpace {
+        width: 100%;
+    }
+
+    .form {
+        padding-top: 30px;
+    }
+
+    #div1, #div2, #div3, #div4 {
+        width: 100%;
+    }
+
+    #radioinputs label {
+        font-size: 1rem;
+        line-height: 1.1rem;
+    }
+
+    .inputSpace label {
+        font-size: 1.1rem;
+    }
+
+    #div4 button {
+        width: 50%;
+        font-size: 1.1rem;
+    }
+
+    .tableSection h2 {
+        font-size: 1.1rem;
+        letter-spacing: 0.1rem;
+    }
+
+    .table tr th {
+        font-size: 1rem;
+    }
+
+    .table tr td {
+        font-size: 0.8rem;
+        padding: 5px;
+    }
+}
+
+@media only screen and (min-width: 480px)and (max-width: 768px) {
+    /* NAVBAR */
+    nav {
+        min-height: 100px;
+    }
+
+    #hamburger {
+        display: block;
+        width: 20px;
+        font-size: 3rem;
+    }
+    
+    #hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #hamburger.active .bar:nth-child(1) {
+        transform: translateY(13px) rotate(45deg);
+    }
+
+    #hamburger.active .bar:nth-child(3) {
+        transform: translateY(-13px) rotate(-45deg);
+    }
+
+    .menu {
+        position: fixed;
+        left: -100%;
+        top: 100px;
+        gap: 0;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: white;
+    }
+    .menu li {
+        margin: 16px 0;
+    }
+
+    .menu.active {
+        left: 0;
+    }
+
+    /* INDEX */
+    .btnFirstSection {
+        width: 60%;
+        font-size: 1.2rem;
+    }
+
+    .section2 h1 {
+        font-size: 1.6rem;
+        letter-spacing: 0.1rem;
+    }
+
+    .container2 {
+        justify-content: center;
+    }
+
+    .container3 {
+        padding: 0;
+    }
+
+    .section3 h1 {
+        font-size: 1.7em;
+    }
+
+    .map {
+        margin: 60px 0;
+    }
+
+    .map iframe {
+        width: 80vw;
+    }
+
+    .contact {
+        width: 75%;
+    }
+
+    /* FOOTER */
+    .footer-container {
+        flex-direction: column;
+        justify-content: center;
+        padding: 30px 0;
+    }
+
+    .col-contact {
+        margin: 20px 0;
+    }
+
+    .img-footer {
+        width: 100px;
+    }
+
+    .col {
+        width: 100%;
+    }
+
+    .col-flex {
+        justify-content: center;
+    }
+
+    .col-flex h2 {
+        font-size: 1.2rem;
+    }
+
+    .list-footer li span {
+        font-size: 1rem;
+    }
+
+    .full {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    /* O NAMA */
+    .div1onama {
+        background-color: #653239;
+        background-image: none;
+    }
+    .div1onama h1 {
+        font-size: 2.5rem;
+    }
+
+    .container11onama, .container2onama {
+        width: 100%;
+        padding: 0 25px;
+    }
+
+    #h21Div1onama {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+    }
+
+    .div2onama {
+        background-color: #e6cda5;
+        background-image: none;
+    }
+
+    #h21Div2onama {
+        color: #653239;
+        font-size: 1.3rem;
+        margin: 0 0 20px 0;
+    }
+
+    #p1Div1onama {
+        width: 100%;
+    }
+
+    #p1Div2onama {
+        width: 100%;
+        margin: 0;
+        color: #653239;
+    }
+
+    .div3onama {
+        background-color: #653239;
+        background-image: none;
+    }
+
+    .container3onama {
+        width: 100%;
+        padding: 0 25px;
+    }
+
+    .container31onama {
+        width: 100%;
+    }
+
+    #h21Div3onama {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+        padding-top: 15%;
+    }
+
+    #p1Div3onama {
+        width: 100%;
+    }
+
+    .div4onama {
+        padding-top: 20px;
+    }
+
+    #h21Div4onama {
+        font-size: 1.7rem;
+        color: #653239;
+    }
+
+    /* PAKETI */
+    .paketi {
+        font-size: 2rem;
+    }
+
+    .container-paketi {
+        flex-direction: column;
+        justify-content: center;
+        margin: 5%;
+        height: min-content;
+        padding: 20px;
+    }
+
+    .container-paketi img {
+        width: 80%;
+        margin: 0;
+        border-radius: 10px;
+    }
+
+    .desc {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .desc h2 {
+        font-size: 1.4rem;
+        font-weight: 700;
+        letter-spacing: 0.1rem;
+        margin-top: 20px;
+    }
+
+    .desc p {
+        font-size: 1rem;
+    }
+
+    .desc button {
+        font-size: 1.1rem;
+        padding: 10px;
+    }
+
+    /* KONSULTACIJE */
+    .inputSpace {
+        width: 100%;
+    }
+
+    .form {
+        padding-top: 30px;
+    }
+
+    #div1, #div2, #div3, #div4 {
+        width: 100%;
+    }
+
+    #radioinputs label {
+        font-size: 1rem;
+        line-height: 1.1rem;
+    }
+
+    .inputSpace label {
+        font-size: 1.1rem;
+    }
+
+    #div4 button {
+        width: 50%;
+        font-size: 1.1rem;
+    }
+
+    .tableSection h2 {
+        font-size: 1.1rem;
+        letter-spacing: 0.1rem;
+    }
+
+    .table tr th {
+        font-size: 1rem;
+    }
+
+    .table tr td {
+        font-size: 0.8rem;
+        padding: 5px;
+    }
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    /* NAVBAR */
+    nav {
+        min-height: 100px;
+    }
+
+    #hamburger {
+        display: block;
+        width: 20px;
+        font-size: 3rem;
+    }
+    
+    #hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #hamburger.active .bar:nth-child(1) {
+        transform: translateY(13px) rotate(45deg);
+    }
+
+    #hamburger.active .bar:nth-child(3) {
+        transform: translateY(-13px) rotate(-45deg);
+    }
+
+    .menu {
+        position: fixed;
+        left: -100%;
+        top: 100px;
+        gap: 0;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: white;
+    }
+    .menu li {
+        margin: 16px 0;
+    }
+
+    .menu.active {
+        left: 0;
+    }
+
+    /* INDEX */
+    .btnFirstSection {
+        width: 60%;
+        font-size: 1.4rem;
+    }
+
+    .section2 h1 {
+        font-size: 1.6rem;
+        letter-spacing: 0.1rem;
+    }
+
+    .container2 {
+        justify-content: center;
+    }
+
+    .container3 {
+        padding: 0;
+    }
+
+    .section3 h1 {
+        font-size: 1.7em;
+    }
+
+    .map {
+        margin: 60px 0;
+    }
+
+    .map iframe {
+        width: 80vw;
+    }
+
+    .contact {
+        width: 75%;
+    }
+
+    /* PAKETI */
+    .container-paketi {
+        margin: 5%;
+        padding: 20px;
+        flex-direction: column;
+        justify-content: center;
+        height: min-content;
+    }
+
+    .container-paketi img {
+        width: 80%;
+        margin: 0;
+        border-radius: 10px;
+    }
+
+    .desc {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .desc h2 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        letter-spacing: 0.1rem;
+        margin-top: 20px;
+    }
+
+    .desc p {
+        font-size: 1.3rem;
+    }
+
+    .desc button {
+        font-size: 1.3rem;
+        padding: 20px;
+    }
+
+    /* KONSULTACIJE */
+    
+
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+    /* NAVBAR */
+    nav {
+        min-height: 100px;
+    }
+
+    #hamburger {
+        display: block;
+        width: 20px;
+        font-size: 3rem;
+    }
+    
+    #hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #hamburger.active .bar:nth-child(1) {
+        transform: translateY(13px) rotate(45deg);
+    }
+
+    #hamburger.active .bar:nth-child(3) {
+        transform: translateY(-13px) rotate(-45deg);
+    }
+
+    .menu {
+        position: fixed;
+        left: -100%;
+        top: 100px;
+        gap: 0;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: white;
+    }
+    .menu li {
+        margin: 16px 0;
+    }
+
+    .menu.active {
+        left: 0;
+    }
+}
